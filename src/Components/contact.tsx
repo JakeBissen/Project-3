@@ -6,7 +6,7 @@ import './ContactC.css';
 function Contact() {
   return (
 
-    <div className="container mt-5">
+    <div className="container mt-5 col-12 col-md-6">
   <h1 className="mb-4">Contact Form</h1>
   <form className="contact-forms">
     

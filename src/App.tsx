@@ -1,27 +1,28 @@
-import { useState, useHook } from 'react'
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Contact from './Components/contact';
 import TodoList from './Components/TodoList';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import NavbarMenu from './Components/NAvbar';
 
 
-
 function App() {
-  
+  console.log("App component rendered");
 
   return (
     <>
-  <div>
-    <BrowserRouter>
-    <NavbarMenu/>
-    </BrowserRouter>
-      
-  </div>
-  
-
-      <div className='Contact-form'>
+    <nav>
+    <NavbarMenu />
+     <Routes> 
+        <Route path="/" element={<h1>Home Page</h1>}  />
+      <Route path="/todos" element={<TodoList/>}  />
+      <Route path="/contact" element={<Contact/>}/>
+      <Route path="/Opt-todos" element={<TodoList/>}/>
+    </Routes>
+</nav>
+       
+       <div>
         <Contact />
-      </div>
+       </div>
+
     </>
   )
 }

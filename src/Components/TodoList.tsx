@@ -2,13 +2,20 @@
 import React from "react";
 
 
-function TodoList() {
+const TodoList = () => {
 
 
   return(
-  <div>TodoList</div>
 
-  ) ;
+    <div>
+      <h2>Todo List Component</h2>
+      <ul>
+        <li>Todo Item 1</li>
+        <li>Todo Item 2</li>
+        <li>Todo Item 3</li>
+      </ul>
+    </div>
+  )
 
 
 }

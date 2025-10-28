@@ -1,33 +1,34 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Contact from './contact';
+import {Link, BrowserRouter, Route, Routes } from 'react-router-dom';
 import TodoList from './TodoList';
-import { Link, Route, Routes } from 'react-router-dom';
-
-
+import Contact from './contact';
 
 function NavbarMenu() {
+    console.log("NAvbar component rendered");
     return (
         <>
-        <Navbar bg="dark" data-bs-theme="dark">
-        <Container>
-          <Nav className="me-auto">
-            <Link  to="/todos">Todos</Link>
-            <Link to="/contact">Contact Form</Link>
-            <Link to="/Opt-todos">Optional Assignments</Link>
-          </Nav>
-        </Container>
-      </Navbar>
-      <br />
+    
+<nav className="navbar navbar-dark bg-dark" data-bs-theme="dark">
+  <div className="container">
+    <Link className="navbar-brand" to="/">Navbar</Link>
+    <div className="navbar-nav me-auto">
+      <Link className="nav-link" to="/todos">Todos</Link>
+      <Link className="nav-link" to="/contact">Contact Form</Link>
+      <Link className="nav-link" to="/Opt-todos">Optional Assignments</Link>
+    </div>
+  </div>
+</nav>
+<br />
 
-      
-      
-      <Routes>
-        <Route path="/todos" element={<TodoList />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/Opt-todos" element={<TodoList />} />
-      </Routes>
+
+   <BrowserRouter>
+    
+    <Routes> 
+        <Route path="/" element={<h1>Home Page</h1>}  />
+      <Route path="/todos" element={<TodoList/>}/>
+      <Route path="/contact" element={<Contact/>}/>
+      <Route path="/Opt-todos" element={<TodoList/>}/>
+    </Routes>
+    </BrowserRouter>
 
     </>
     )
