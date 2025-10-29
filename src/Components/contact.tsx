@@ -54,7 +54,7 @@ function Contact() {
       ></textarea>
     </div>
 
-    <button type="submit" className="btn btn-primary">Submit</button>
+    <button type="submit" className="btn btn">Submit</button>
   </form>
 </div>
       
