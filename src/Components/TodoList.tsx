@@ -50,7 +50,16 @@ function toggleTodo(id: number){
   setTodos(prev => prev.map(todo => todo.id === id ? {...todo, completed: !todo.completed} : todo));
 }
 
+function deleteTodo(id: number){
+  setTodos(prev => prev.filter(todo => todo.id !== id));
+}
 
+
+function FilterTodos(): Todo[] {
+  if (filter === 'completed') return todos.filter(todo => todo.completed);
+  if (filter === 'incomplete') return todos.filter(todo => !todo.completed);
+  return todos;
+}
 
 
 
