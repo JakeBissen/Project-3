@@ -8,7 +8,10 @@ function Contact() {
 
     <div className="container mt-5 col-12 col-md-6">
   <h1 className="mb-4">Contact Form</h1>
-  <form className="contact-forms">
+  <form 
+  className="contact-forms"
+  action='https://formspree.io/f/xyzbjndw' 
+  method='POST'>
     
 
     <div className="form-group mb-3 ">
@@ -18,6 +21,7 @@ function Contact() {
         type="text"
         className="form-control"
         id="FirstName"
+        name='FirstName'
         placeholder="Enter your first name"
       />
     </div>
@@ -29,6 +33,7 @@ function Contact() {
         type="text"
         className="form-control"
         id="LastName"
+          name='LastName'
         placeholder="Enter your last name"
       />
     </div>
@@ -40,6 +45,7 @@ function Contact() {
         type="email"
         className="form-control"
         id="email"
+        name='email'
         placeholder="Enter your work email"
       />
     </div>
@@ -50,6 +56,7 @@ function Contact() {
       <textarea
         className="form-control"
         id="text-box"
+        name='text-box'
         placeholder="Enter any comments, questions, or concerns with the tasks you are expected to complete."
       ></textarea>
     </div>
