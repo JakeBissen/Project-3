@@ -1,0 +1,125 @@
+
+
+.todo-module {
+  max-width: 1100px;
+  margin: 28px auto;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6));
+  border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.todo-title {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.filter-buttons {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:8px;
+  border:1px solid rgba(15,23,42,0.06);
+  background: #fff;
+  cursor:pointer;
+  transition: transform .08s ease, box-shadow .12s ease;
+  font-weight:600;
+}
+
+
+.filter-buttons button {
+    margin-right: 8px;
+    padding: 6px, 10px;
+}
+
+.filter-buttons button.active {
+    background-color: #eee;
+}
+
+.todo-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    align-items: start;
+    gap: 16px;
+}
+
+.todo-form {
+   background: cardinal;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.form-buttons {
+    display:flex;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.form-buttons .btn.primary {
+    padding: 10px 14px;
+}
+
+.todo-list {
+    background: #f0f0f0;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.todo-item {
+    display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:center;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #f0f0f0;
+    background:#d3caca;
+}
+
+.todo-main {
+    max-width: 70%;
+}
+
+.todo-name 
+
+.todo-item.completed {
+    background: #f8f8f8;
+    color: #666;
+}
+
+.todo-item.completed .todo-name,
+ .todo-item.completed .todo-desc {
+    text-decoration: line-through;
+ }
+
+ .todo-actions {
+    display:flex;
+    gap:8px;
+    align-items: center;
+ }
+
+ .delete-btn {
+    color: red;
+ }
+
+
+

@@ -64,9 +64,10 @@ function FilterTodos(): Todo[] {
 }
 
 
-function handleSubmit(e: FormEvent) {
-  e.preventDefault();
-  addToDo();
+function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    addToDo();
+
 }
 
 const shown = FilterTodos();
