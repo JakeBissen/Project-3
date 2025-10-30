@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import './TodoListC.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 type Todo = {
@@ -18,14 +18,22 @@ type Filter = "all" | "completed" | "incomplete";
 const TodoList = () => {
   const [todos, setTodos] = useState<Todo[]>([
 
-   { id: Date.now(), name: 'test', description: 'test todo', completed: false }
-  ]);  // example initial state REMOVE THIS LATER!
+   { id: Date.now(), name: 'Develop A website for Siren Industries', description: 'Create a website that allows customers to buy merch from Siren Industries.', completed: false },
+
+   { id: Date.now() + 1, name: 'Profile Interface', description: 'Complete the front end portion of the user face for Pemon Industries', completed: true },
+
+   { id: Date.now() + 2, name: 'Replace CSS with SASS', description: 'Replace the css elements of the input form titled: "Car Jousting" as per the requirements of the client. ', completed: false },
+   
+   { id: Date.now() + 3, name: 'SkyNet', description: 'Stop SkyNet.', completed: true }
+
+   
+  ]);  // example initial states, can be removed if needed.
 
 
   const [filter, setFilter] = useState<Filter>('all');
   const [name, setName] = useState<string>('');
   const [description, setDescription] = useState<string>("");
-  const [dueDate, setDueDate] = useState<string>("");
+  const [dueDate, setDueDate] = useState<string>('');
 
 
 function addToDo() {
@@ -71,8 +79,14 @@ function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
 }
 
 const shown = FilterTodos();
+
+// form!
   return(
-   <div className='todo-module' >
+<>
+
+   <div className='todo-module container ' > 
+    <div className='row '>
+      <div className='col-12 col-md-8 justify-content-center mx-auto'>
     <h2 className='todo-title'>Todos</h2>
 
     <div className='filter-buttons'>
@@ -92,12 +106,14 @@ const shown = FilterTodos();
 
         <label>
           <div><strong>Description</strong></div>
-          <input value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Task Description (Optional)" />
+          <input value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Task Description " 
+          required/>
         </label>
 
         <label>
           <div><strong>Due Date</strong></div>
-          <input type="date" value={dueDate} onChange={(e) => setDueDate(e.target.value)} />
+          <input type="date" value={dueDate} onChange={(e) => setDueDate(e.target.value)} 
+          required/>
         </label>
 
         <div className='form-buttons'>
@@ -139,10 +155,12 @@ const shown = FilterTodos();
             </div>
            )}
         </div>
+         </div>
     </div>
-
+    </div>
    </div>
-    
+
+    </>
   );
 }
 

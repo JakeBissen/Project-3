@@ -8,12 +8,14 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     background-color:#f3f6fd;
 
+
 }
 
 .todo-title {
     margin: 0 0 8px 0;
     font-size: 20px;
-    text-align: center;
+    font-weight: 700;
+    margin: 10px 0 21px 0;
 }
 
 button {
@@ -34,6 +36,20 @@ button {
     flex-wrap: wrap;
 }
 
+.filter-buttons button {
+    border-radius: 10px;
+    padding: 6px 10px;
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+}
+
+.filter-buttons button.active {
+    background-color: rgb(113, 197, 29);
+    color: white;
+}
+
+
 .btn{
   display:inline-flex;
   align-items:center;
@@ -48,18 +64,6 @@ button {
 
 }
 
-
-.filter-buttons button {
-    margin-right: 8px;
-    padding: 6px, 10px;
-    background-color:cornflowerblue;
-}
-
-.filter-buttons button.active {
-    background-color:rgb(113, 197, 29);
-    color: white;
-}
-
 .todo-form-grid {
     display: grid;
     grid-template-columns: 1fr 1.4fr;
@@ -67,12 +71,20 @@ button {
     gap: 16px;
 }
 
-.todo-form {
-   background: silver;
-    padding: 16px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.todo-form input[type="text"],
+    .todo-form input[type="date"],
+    .todo-form input,
+    .todo-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.12);
+  font-size: 0.95rem;
+  background: #dedada;
+  color: black;
 }
+
 
 .form-buttons {
     display:flex;
@@ -89,6 +101,19 @@ button {
     padding: 12px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-height: 60vh;
+    /* max-height needs to addjust to page size, replace with bootstrap?*/
+    overflow: auto;
+}
+
+.todo-list {
+    background: lightgray;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-height: 50vh;
+    /* max-height needs to addjust to page size, replace with bootstrap?*/
+    overflow: auto;
 }
 
 .items {
@@ -100,17 +125,20 @@ button {
 
 .todo-item {
     display:flex;
-  justify-content:space-between;
-  gap:12px;
-  align-items:center;
-  padding:12px;
-  border-radius:10px;
-  border:1px solid white;
+    justify-content:space-between;
+    gap:12px;
+    align-items:center;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid white;
     background:#d3caca;
+    gap: 12px;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .todo-main {
-    max-width: 70%;
+    max-width: 100%;
 }
 
 .todo-name {
@@ -135,7 +163,6 @@ button {
 
 .todo-item.completed .todo-name,
  .todo-item.completed .todo-desc {
-    text-decoration: line-through;
     color: #271f1f;
  }
 
@@ -143,11 +170,39 @@ button {
     display:flex;
     gap:8px;
     align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+
+ }
+
+ .done-toggle {
+    display:inline-flex;
+    gap: 6px;
+    align-items:center;
+    cursor: pointer;
+    user-select: none;
  }
 
  .done-toggle input {
-    transform:scale(1.05);
+    transform:scale(1.1);
     margin-right: 6px;
+ }
+
+ @media (max-width: 840px) {
+    .todo-form-grid {
+        grid-template-columns: 1fr;
+    }
+ }
+
+ @media (max-width: 420px) {
+    .todo-module {
+        margin: 16px;
+        padding: 12px;
+    }
+
+    .todo-actions {
+        justify-content: flex-start;
+    }
  }
 
  .delete-btn {
@@ -159,9 +214,4 @@ button {
     .delete-btn:hover {
         text-decoration: underline;
     }
-
-
-
-
-
 
