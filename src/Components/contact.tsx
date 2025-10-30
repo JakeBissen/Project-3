@@ -5,7 +5,7 @@ import './ContactC.css';
 function Contact() {
   return (
 
-    <div className="container mt-5 col-12 col-md-6">
+    <div>
   <h1 className="mb-4">Contact Form</h1>
   <form 
   className="contact-forms"
@@ -13,7 +13,7 @@ function Contact() {
   method='POST'>
     
 
-    <div className="form-group mb-3 ">
+    <div className="form-group ">
       <label htmlFor="FirstName" className="form-label">
         First Name</label>
       <input
