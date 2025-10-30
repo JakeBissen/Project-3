@@ -1,21 +1,31 @@
 
-
+h3 {
+    text-align: center;
+}
 .todo-module {
-  max-width: 1180px;
+  max-width: 2000px;
   margin: 40px auto;
   padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     background-color:#f3f6fd;
-
-
 }
+
+.todo-form-container {
+  margin: 40px auto;
+  padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    background-color:#f3f6fd;
+}
+
 
 .todo-title {
     margin: 0 0 8px 0;
     font-size: 20px;
     font-weight: 700;
     margin: 10px 0 21px 0;
+    text-align: center;
 }
 
 button {
@@ -66,9 +76,16 @@ button {
 
 .todo-form-grid {
     display: grid;
-    grid-template-columns: 1fr 1.4fr;
+    grid-template-columns: 360px 1fr;
     align-items: start;
-    gap: 16px;
+    gap: 20px;
+}
+
+.todo-creator {
+    background : lightgray;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .todo-form input[type="text"],
@@ -96,6 +113,13 @@ button {
     padding: 10px 14px;
 }
 
+.todo-list-section {
+    background: lightgray;
+    padding: 12px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
 .todo-list {
     background: lightgray;
     padding: 12px;
@@ -112,7 +136,6 @@ button {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     max-height: 50vh;
-    /* max-height needs to addjust to page size, replace with bootstrap?*/
     overflow: auto;
 }
 
@@ -188,7 +211,9 @@ button {
     margin-right: 6px;
  }
 
- @media (max-width: 840px) {
+
+
+  @media (max-width: 840px) {
     .todo-form-grid {
         grid-template-columns: 1fr;
     }
@@ -198,12 +223,28 @@ button {
     .todo-module {
         margin: 16px;
         padding: 12px;
+    } 
+}
+
+    @media (min-width: 992px) {
+        .todo-creator {
+            position: sticky;
+            top: 24px;
+            height: fit-content;
+        }
     }
+
+    @media (max-width: 840px) {
+  .todo-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
     .todo-actions {
         justify-content: flex-start;
     }
- }
+ 
 
  .delete-btn {
     background: transparent;
@@ -214,4 +255,71 @@ button {
     .delete-btn:hover {
         text-decoration: underline;
     }
+
+    .edit-btn {
+        background: transparent;
+        border: none;
+        color: rgb(43, 87, 212);
+        cursor: pointer;
+    }
+
+    .edit-btn:hover {
+        text-decoration: underline;
+    }
+
+    .save-btn {
+        background: transparent;
+        border: none;
+        color: rgb(106, 154, 119);
+        cursor: pointer;
+    }
+    .save-btn:hover {
+        text-decoration: underline;
+    }
+
+    .cancel-btn {
+        background: transparent;
+        border: none;
+        color: rgb(224, 117, 3);
+        cursor: pointer;
+    }
+
+    .cancel-btn:hover {
+        text-decoration: underline;
+    }
+
+.edit-name {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    font-size: 0.95rem;
+    background: #dedada;
+    color: black;
+}
+
+.edit-desc {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    font-size: 0.95rem;
+    background: #dedada;
+    color: black;
+}
+
+.edit-date {
+    
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    font-size: 0.95rem;
+    background: #dedada;
+    color: black;
+}
+
 

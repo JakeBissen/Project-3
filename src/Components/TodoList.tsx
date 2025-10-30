@@ -106,13 +106,14 @@ const TodoList: React.FC = () => {
 
   const shown = filterTodos();
 
-  // form!
-  return(
+  
+return(
     <>
-      <div className='todo-module container ' >
-        <div className='row '>
-          <div className='col-12 col-md-8 justify-content-center mx-auto'>
-            <h2 className='todo-title'>Todos</h2>
+    <div className='totdo-module' >
+    <div className="todo-form-container">
+      <div className='todo-form-grid ' >
+        <div className='todo-creator '>
+            <h2 className='todo-title'>Todos Creator</h2>
 
             <div className='filter-buttons'>
               <button onClick ={() => setFilter('all')}
@@ -122,8 +123,8 @@ const TodoList: React.FC = () => {
 
               <button onClick ={() => setFilter('incomplete')} className={filter === 'incomplete' ? 'active': ''}>Incomplete</button>
             </div>
-            <div className='todo-form-grid'>
-              <form onSubmit={handleSubmit} className='todo-form'>
+
+          <form onSubmit={handleSubmit} className='todo-form'>
                 <label>
                   <div><strong>Name</strong></div>
                   <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Task Name" required />
@@ -149,9 +150,13 @@ const TodoList: React.FC = () => {
                   </button>
                 </div>
               </form>
+    </div>
 
-              <div className='todo-list'>
-                <h3>List</h3>
+        {/* todo list */}
+        <div className='todo-list-section mt-4'>
+              <div className='todo-list container mt-4'>
+                <h3>List of Current Todos</h3>
+
                 {shown.length === 0? (
                   <div className='no-todos'>No todos</div>
                 ): (
@@ -164,9 +169,10 @@ const TodoList: React.FC = () => {
                             <div className='edit-form'>
                               <input className='edit-name' value={editingName} onChange={e => setEditingName(e.target.value)} />
                               <input className="edit-desc" value={editingDescription} onChange={e => setEditingDescription(e.target.value)} />
-                              <input type="date" className="edit-due" value={editingDueDate} onChange={e => setEditingDueDate(e.target.value)} />
+                              <input type="date" className="edit-date" value={editingDueDate} onChange={e => setEditingDueDate(e.target.value)} />
                             </div>
                           ) : (
+
                             <>
                               <div className='todo-name'>{todo.name}</div>
                               {todo.description && <div className='todo-desc'>{todo.description}</div>}
@@ -188,6 +194,7 @@ const TodoList: React.FC = () => {
                               <button className='cancel-btn' onClick={cancelEdit}>Cancel</button>
                             </>
                           ) : (
+
                             <>
                               <button className='edit-btn' onClick={() => startEdit(todo)}>Edit</button>
                               <button className='delete-btn' onClick={() => deleteTodo(todo.id)}>Delete</button>
@@ -202,7 +209,7 @@ const TodoList: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+        </div>
     </>
   );
 }
