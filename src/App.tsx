@@ -4,6 +4,7 @@ import TodoList from './Components/TodoList';
 import Homepage from './Components/Homepage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import './Components/ContactC.css'
 
 
 
@@ -44,12 +45,15 @@ function App() {
     </div>
   </nav>
 
+  
+
   <Routes>
     <Route path="/" element={<Homepage />} />
     <Route path="/todos" element={<TodoList />} />
     <Route path="/contact" element={<Contact />} />
     <Route path="/Opt-todos" element={<TodoList />} />
   </Routes>
+
 </HashRouter>
 
      

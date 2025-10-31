@@ -3,6 +3,10 @@ h3 {
     text-align: center;
 }
 
+:root {
+    background-color: white;
+}
+
 .todo-module {
   max-width: 2000px;
   margin: 40px auto;
@@ -14,7 +18,7 @@ h3 {
 
 .todo-form-container {
   margin: 40px auto;
-  padding: 20px;
+  padding: 52px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     background-color:#f3f6fd;
@@ -235,11 +239,6 @@ button {
         }
     }
 
-    @media (max-width: 840px) {
-  .todo-form-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 
     .todo-actions {

@@ -5,10 +5,13 @@ import './ContactC.css';
 function Contact() {
   return (
 
-    <div>
+    <div className='BODY'>
+    <div className='container'>
+    <div className='form-backdrop '>
+      <div className='col-12 p-4 row text-center'>
   <h1 className="mb-4">Contact Form</h1>
   <form 
-  className="contact-forms"
+  className="contact-forms col-sm-12 col-lg-12 col-m-12 "
   action='https://formspree.io/f/xyzbjndw' 
   method='POST'>
     
@@ -63,7 +66,9 @@ function Contact() {
     <button type="submit" className="btn btn">Submit</button>
   </form>
 </div>
-      
+</div>
+    </div>
+    </div>
   );
 }
 

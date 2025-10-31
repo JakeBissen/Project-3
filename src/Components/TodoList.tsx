@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import './TodoListC.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 type Todo = {
