@@ -1,0 +1,13 @@
+
+
+body {
+    background-image: url(/Project-3/src/assets/image.png);
+        background-position: 100%;
+        background-attachment: fixed;
+        background-size: cover;
+}
+
+.text-BOX {
+    justify-content: center;
+    text-align: center;
+}

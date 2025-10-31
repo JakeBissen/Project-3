@@ -21,7 +21,7 @@ h3 {
   padding: 52px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    background-color:#f3f6fd;
+    background-color:#d6dff7;
 }
 
 
@@ -209,6 +209,7 @@ button {
     align-items:center;
     cursor: pointer;
     user-select: none;
+ /* ingore error */
  }
 
  .done-toggle input {
